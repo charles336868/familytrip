@@ -1,68 +1,43 @@
-# Kansai Family Trip 2026 🇯🇵
+# 2026 關西家族旅行手札 🇯🇵
 
-A personalized travel itinerary web application built for our family trip to Kyoto, Osaka, and Kobe in February 2026.
+這是為 2026 年 2 月家族旅行（京都、大阪、神戶）量身打造的旅遊 App。
 
-## ✨ Features
+## 📍 應用程式連結
+**[點擊開啟 App (GitHub Pages)](https://charles336868.github.io/familytrip/)**
 
-- **Interactive Itinerary**: Detailed day-by-day schedule with locations and notes.
-- **Trip Checklist**: Smart checklist for documents, gadgets, and clothing with persistence.
-- **Taxi Cards**: Bilingual (JP/CN) cards with large text mode to show to taxi drivers.
-- **Essentials Info**: Quick access to flight, hotel, and shopping information.
-- **Responsive Design**: Works perfectly on mobile for use during the trip.
+## ✨ 主要功能
 
-## 🛠️ Tech Stack
+- **互動式行程**：每日詳細行程、地點與備註，點擊地點可直接開啟 Google Maps。
+- **準備清單**：智能檢查表，涵蓋證件、電器與衣物，進度自動儲存於瀏覽器。
+- **必買清單**：整合京阪熱門推薦（藥妝、潮流、伴手禮）與自定義私藏清單。
+- **司機溝通卡**：中日雙語對照，支援「全螢幕聚焦模式」，輕鬆與日本司機溝通。
+- **響應式佈局**：針對行動裝置優化，單手好操控。
 
-- **Framework**: React 18 + Vite
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **Font**: Google Fonts (Noto Sans TC & Playfair Display)
+## 🛠️ 技術棧
 
-## 🚀 Getting Started
+- **框架**: React 18 + Vite
+- **語言**: TypeScript
+- **樣式**: Tailwind CSS
+- **圖標**: Lucide React
+- **字體**: Noto Sans TC & Playfair Display
 
-### Prerequisites
+## 🚀 部署資訊
 
-- Node.js (v18 or higher)
-- npm or yarn
+本專案已配置 GitHub Actions 自動部署：
 
-### Installation
+1. 將變更推送到 `main` 分支。
+2. 背景將自動啟動 `Deploy` 工作流。
+3. 部署完成後，可於上述連結查看最新版本。
 
-1. Clone the repository
-   ```bash
-   git clone https://github.com/yourusername/kansai-family-trip-2026.git
-   ```
+> [!IMPORTANT]
+> **隱私提示**：本專案包含私人航班與住宿資訊。建議將 GitHub 儲存庫設為 **Private (私有)**。
 
-2. Install dependencies
-   ```bash
-   npm install
-   ```
+## 📱 使用說明
 
-   *Note: If you encounter permission errors, a local `.npm-cache` is configured in `.npmrc`.*
-
-3. Run the development server
-   ```bash
-   npm run dev
-   ```
-
-4. Open `http://localhost:5173` in your browser.
-
-### Deployment
-
-This project is configured to automatically deploy to GitHub Pages using GitHub Actions.
-
-1. Push changes to the `main` branch.
-2. The `Deploy` workflow will automatically build and deploy the application.
-3. Access the deployed site at `https://yourusername.github.io/kansai-family-trip-2026/`.
-
-## 📱 Usage
-
-- **Itinerary Tab**: Tap on day cards to expand details. Click on location pills to open Google Maps.
-- **Checklist Tab**: Tap items to mark them as done. Progress is saved automatically.
-- **Info Tab**: Access hotel addresses and show taxi cards to drivers.
-
-## 📄 License
-
-This project is for personal use.
+- **行程頁籤**：點擊卡片可查看詳細資訊或地圖。
+- **準備清單**：隨手紀錄準備進度。
+- **購物頁籤**：精選京阪攻略，並可自行新增想要的小物。
+- **重要資訊**：快速存取飯店地址、航班時間與司機溝通卡。
 
 ---
-*Have a safe trip!* ✈️
+*祝全家人旅途平安順心！* ✈️
