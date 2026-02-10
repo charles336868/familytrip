@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { ItineraryDay, ActivityType } from '../types';
 import { MapPin, ChevronDown, Plane, Train, Utensils, ShoppingBag, Camera, Hotel, Info, Footprints, BookOpen } from 'lucide-react';
 

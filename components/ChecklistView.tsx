@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ChecklistItemData } from '../types';
 import { Check, Trash2, Plus, ClipboardCheck } from 'lucide-react';
 
