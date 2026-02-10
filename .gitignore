@@ -117,3 +117,11 @@ dist
 
 # Vite
 dist
+.npm-cache
+
+# Local Env
+.env*
+.env.local
+
+# Mac
+.DS_Store

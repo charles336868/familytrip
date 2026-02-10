@@ -37,12 +37,22 @@ A personalized travel itinerary web application built for our family trip to Kyo
    npm install
    ```
 
+   *Note: If you encounter permission errors, a local `.npm-cache` is configured in `.npmrc`.*
+
 3. Run the development server
    ```bash
    npm run dev
    ```
 
 4. Open `http://localhost:5173` in your browser.
+
+### Deployment
+
+This project is configured to automatically deploy to GitHub Pages using GitHub Actions.
+
+1. Push changes to the `main` branch.
+2. The `Deploy` workflow will automatically build and deploy the application.
+3. Access the deployed site at `https://yourusername.github.io/kansai-family-trip-2026/`.
 
 ## 📱 Usage
 

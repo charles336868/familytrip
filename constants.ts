@@ -1,4 +1,4 @@
-import { ItineraryDay, ChecklistItemData, TaxiCardData, HotelData, ShoppingItem } from './types';
+import { ItineraryDay, ChecklistItemData, TaxiCardData, HotelData, ShoppingItem, FlightInfo } from './types';
 
 export const ITINERARY_DATA: ItineraryDay[] = [
   {
@@ -171,26 +171,64 @@ export const TAXI_CARDS: TaxiCardData[] = [
 ];
 
 export const HOTEL_INFO: HotelData[] = [
-  { 
-    city: "京都 Kyoto", 
-    name: "京蘭 【柳月邸】", 
-    address: "〒612-0005 京都府京都市伏見区深草森吉町6-23", 
+  {
+    city: "京都 Kyoto",
+    name: "京蘭 【柳月邸】",
+    address: "〒612-0005 京都府京都市伏見区深草森吉町6-23",
     phone: "請確認訂房紀錄",
-    note: "近 JR 稻荷站 (步行6分) / 京阪 伏見稻荷站" 
+    note: "近 JR 稻荷站 (步行6分) / 京阪 伏見稻荷站"
   },
-  { 
-    city: "大阪 Osaka", 
-    name: "JS暁宅・清音", 
-    address: "〒557-0031 大阪府大阪市西成区鶴見橋2丁目11-17", 
+  {
+    city: "大阪 Osaka",
+    name: "JS暁宅・清音",
+    address: "〒557-0031 大阪府大阪市西成区鶴見橋2丁目11-17",
     phone: "請確認訂房紀錄",
-    note: "退房後寄放行李" 
+    note: "退房後寄放行李"
   }
 ];
 
 export const SHOPPING_LIST: ShoppingItem[] = [
-  { day: "Day 1", area: "京都 新風館", items: ["BEAMS JAPAN (限定商品)", "Pilgrim Surf+Supply", "KAPITAL (傳統工藝風)"] },
+  { day: "Day 1", area: "京都 四條河原町 / 三條", items: ["Human Made 1928 (潮流指標)", "KAPITAL (三條店 / 絕美町家)", "Kyoto BAL (高質感選物/Aesop)", "SOU・SOU (京都織物品牌)", "Nintendo KYOTO (高島屋內)", "BEAMS JAPAN (新風館限定)", "Loft / Uniqlo (Mina Kyoto)"] },
   { day: "Day 3", area: "宇治", items: ["中村藤吉 抹茶甜點", "伊藤久右衛門 伴手禮"] },
-  { day: "Day 5", area: "大阪 堀江", items: ["Supreme (潮流)", "BAPE (潮流)", "LHP (thisisneverthat)", "古著店"] },
-  { day: "Day 6", area: "臨空城 Outlet", items: ["Nike / Adidas", "日系服飾 (Beams/United Arrows)", "Le Creuset 鑄鐵鍋"] },
+  { day: "Day 4", area: "大阪 梅田 (LUCUA / Grand Front)", items: ["STUDIOUS (日系設計師選物)", "UNITED ARROWS / BEAMS", "Nakagawa Masashichi (質感工藝)", "Snow Peak (戶外美學)", "TSUCHIYA KABAN (土屋鞄製造所)", "MUJI (大品牌旗艦店)"] },
+  { day: "Day 5", area: "大阪 堀江 (Orange Street)", items: ["BIOTOP (頂級選物/綠意空間)", "Supreme / BAPE / Neighborhood", "Carhartt WIP / WTAPS / SOPH.", "master-piece (MSPC 旗艦店)", "2nd Street (精品二手挖掘)", "Acme Furniture (美式復古家具)"] },
+  { day: "Day 6", area: "臨空城 Outlet", items: ["Nike / Adidas", "日系服飾 (United Arrows/Ships)", "Le Creuset 鑄鐵鍋"] },
   { day: "Day 7", area: "機場免稅店", items: ["白色戀人", "ROYCE 生巧克力", "東京香蕉", "獺祭 (清酒)"] },
+  { day: "General", area: "京都 必買推薦", items: ["因幡堂貓咪/文鳥御守", "錦市場漬物/京菓子", "西陣織/京扇子", "一保堂茶舖 抹茶粉"] },
+  { day: "General", area: "大阪 藥妝/零食", items: ["合利他命 EX Plus", "EVE 止痛藥", "大正感冒藥", "參天/樂敦眼藥水", "休足時間 / 撒隆巴斯", "蒸氣眼罩", "一蘭拉麵泡麵版", "KitKat 限定口味", "蒟蒻畑果凍"] },
+];
+export const FLIGHT_INFO: FlightInfo[] = [
+  {
+    type: 'departure',
+    flightNo: 'VZ566',
+    airline: 'Thai VietJet',
+    date: '02/16 (Mon)',
+    depTime: '07:30',
+    depAirport: 'TPE',
+    arrTime: '11:00',
+    arrAirport: 'KIX',
+    terminal: 'T1'
+  },
+  {
+    type: 'early_return',
+    flightNo: 'VZ567',
+    airline: 'Thai VietJet',
+    date: '02/20 (Fri)',
+    depTime: '12:00',
+    depAirport: 'KIX',
+    arrTime: '14:15',
+    arrAirport: 'TPE',
+    terminal: 'T1'
+  },
+  {
+    type: 'main_return',
+    flightNo: 'VZ567',
+    airline: 'Thai VietJet',
+    date: '02/22 (Sun)',
+    depTime: '12:00',
+    depAirport: 'KIX',
+    arrTime: '14:15',
+    arrAirport: 'TPE',
+    terminal: 'T1'
+  }
 ];

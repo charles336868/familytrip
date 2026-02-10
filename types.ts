@@ -56,3 +56,22 @@ export interface ShoppingItem {
   area: string;
   items: string[];
 }
+
+export interface PersonalShoppingItem {
+  id: number;
+  item: string;
+  area?: string;
+  checked: boolean;
+}
+
+export interface FlightInfo {
+  type: 'departure' | 'return' | 'early_return' | 'main_return';
+  flightNo: string;
+  airline: string;
+  date: string;
+  depTime: string;
+  depAirport: string;
+  arrTime: string;
+  arrAirport: string;
+  terminal?: string;
+}
