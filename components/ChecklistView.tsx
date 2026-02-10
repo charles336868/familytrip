@@ -166,24 +166,27 @@ export const ChecklistView = ({ initialData }: ChecklistViewProps) => {
                                     return (
                                         <div
                                             key={item.id}
-                                            className={`flex items-center gap-4 p-4 rounded-2xl border transition-all duration-300 group ${isChecked ? 'bg-stone-50/50 border-transparent opacity-60' : 'bg-white border-stone-100 shadow-sm hover:border-emerald-200'}`}
+                                            className={`flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 p-4 rounded-2xl border transition-all duration-300 group ${isChecked ? 'bg-stone-50/50 border-transparent opacity-60' : 'bg-white border-stone-100 shadow-sm hover:border-emerald-200'}`}
                                         >
-                                            <button
-                                                onClick={() => toggleCheck(item.id)}
-                                                className={`w-7 h-7 rounded-xl border-2 flex items-center justify-center transition-all duration-300 ${isChecked ? 'bg-emerald-500 border-emerald-500 text-white shadow-[0_0_15px_-3px_rgba(16,185,129,0.5)]' : 'bg-white border-stone-200 text-transparent hover:border-emerald-300'}`}
-                                            >
-                                                <Check size={16} strokeWidth={4} />
-                                            </button>
-                                            <div className="flex-1 min-w-0">
-                                                <span className={`text-base block truncate transition-all ${isChecked ? 'text-stone-400 line-through' : 'text-stone-800 font-medium'}`}>
-                                                    {item.item}
-                                                </span>
-                                                {item.important && !isChecked && (
-                                                    <span className="inline-block mt-1 text-[9px] font-black tracking-widest text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full uppercase border border-emerald-100">必備</span>
-                                                )}
+                                            <div className="flex items-center gap-4 flex-1">
+                                                <button
+                                                    onClick={() => toggleCheck(item.id)}
+                                                    className={`w-7 h-7 rounded-xl border-2 flex items-center justify-center transition-all duration-300 flex-shrink-0 ${isChecked ? 'bg-emerald-500 border-emerald-500 text-white shadow-[0_0_15px_-3px_rgba(16,185,129,0.5)]' : 'bg-white border-stone-200 text-transparent hover:border-emerald-300'}`}
+                                                >
+                                                    <Check size={16} strokeWidth={4} />
+                                                </button>
+                                                <div className="flex-1 min-w-0">
+                                                    <span className={`text-base block truncate transition-all ${isChecked ? 'text-stone-400 line-through' : 'text-stone-800 font-medium'}`}>
+                                                        {item.item}
+                                                    </span>
+                                                    {item.important && !isChecked && (
+                                                        <span className="inline-block mt-1 text-[9px] font-black tracking-widest text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full uppercase border border-emerald-100">必備</span>
+                                                    )}
+                                                </div>
                                             </div>
+
                                             {isCustom && (
-                                                <div className="flex items-center gap-1">
+                                                <div className="flex items-center justify-between sm:justify-end gap-2 pt-2 sm:pt-0 border-t sm:border-t-0 border-stone-100">
                                                     <div className="flex gap-1 overflow-x-auto no-scrollbar py-1">
                                                         {categories.map(catOpt => (
                                                             catOpt !== item.category && (
@@ -196,7 +199,7 @@ export const ChecklistView = ({ initialData }: ChecklistViewProps) => {
                                                                     {catOpt === 'gadget' && <Plus size={10} />}
                                                                     {catOpt === 'clothing' && <Check size={10} />}
                                                                     {catOpt === 'money' && <Check size={10} />}
-                                                                    <span className="whitespace-nowrap">
+                                                                    <span className="whitespace-nowrap hidden md:inline">
                                                                         {catOpt === 'document' && '移至文件'}
                                                                         {catOpt === 'gadget' && '移至器材'}
                                                                         {catOpt === 'clothing' && '移至服飾'}
@@ -208,7 +211,7 @@ export const ChecklistView = ({ initialData }: ChecklistViewProps) => {
                                                     </div>
                                                     <button
                                                         onClick={() => removeItem(item.id)}
-                                                        className="p-2 text-stone-300 hover:text-red-500 transition-all rounded-lg hover:bg-red-50"
+                                                        className="p-2 text-stone-300 hover:text-red-500 transition-all rounded-lg hover:bg-red-50 flex-shrink-0"
                                                     >
                                                         <Trash2 size={16} />
                                                     </button>
