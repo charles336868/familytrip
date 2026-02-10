@@ -124,20 +124,21 @@ export const ChecklistView = ({ initialData }: ChecklistViewProps) => {
                         </button>
                     ))}
                 </div>
-                <div className="flex gap-3 mt-2">
+                <div className="flex flex-col sm:flex-row gap-3 mt-2">
                     <input
                         type="text"
                         value={newItemText}
                         onChange={(e) => setNewItemText(e.target.value)}
                         placeholder="新增您在這個分類的清單..."
-                        className="flex-1 bg-stone-50/50 border border-stone-100 rounded-2xl px-6 text-sm focus:outline-none focus:ring-4 focus:ring-emerald-500/10 focus:border-emerald-500/50 transition-all"
+                        className="flex-1 bg-stone-50/50 border border-stone-100 rounded-2xl px-6 py-4 text-sm focus:outline-none focus:ring-4 focus:ring-emerald-500/10 focus:border-emerald-500/50 transition-all"
                         onKeyDown={(e) => e.key === 'Enter' && addItem()}
                     />
                     <button
                         onClick={addItem}
-                        className="bg-stone-900 text-white p-4 rounded-2xl hover:bg-emerald-700 transition-all shadow-lg active:scale-95"
+                        className="bg-stone-900 text-white p-4 sm:p-5 rounded-2xl hover:bg-emerald-700 transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2"
                     >
                         <Plus size={24} />
+                        <span className="sm:hidden font-bold">新增項目</span>
                     </button>
                 </div>
             </div>
@@ -175,12 +176,12 @@ export const ChecklistView = ({ initialData }: ChecklistViewProps) => {
                                                 >
                                                     <Check size={16} strokeWidth={4} />
                                                 </button>
-                                                <div className="flex-1 min-w-0">
-                                                    <span className={`text-base block truncate transition-all ${isChecked ? 'text-stone-400 line-through' : 'text-stone-800 font-medium'}`}>
+                                                <div className="flex-1 min-w-0 py-1">
+                                                    <span className={`text-base block break-words leading-tight transition-all ${isChecked ? 'text-stone-400 line-through' : 'text-stone-800 font-medium'}`}>
                                                         {item.item}
                                                     </span>
                                                     {item.important && !isChecked && (
-                                                        <span className="inline-block mt-1 text-[9px] font-black tracking-widest text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full uppercase border border-emerald-100">必備</span>
+                                                        <span className="inline-block mt-1.5 text-[9px] font-black tracking-widest text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full uppercase border border-emerald-100">必備</span>
                                                     )}
                                                 </div>
                                             </div>
